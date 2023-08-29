@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Supplier List</title>
+</head>
+<body>
+    <h1>Supplier List</h1>
+    <ul>
+        {% for supplier in suppliers %}
+            <li>{{ supplier.name }} - Email: {{ supplier.email }} - Phone: {{ supplier.phone }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_supplier' %}">Add Supplier</a>
+</body>
+</html>

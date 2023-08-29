@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<script src="{% static 'js/script.js' %}"></script>
+
+<html>
+<head>
+    <title>Add Product</title>
+</head>
+<body>
+    <h1>Add Product</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Product</button>
+    </form>
+    <a href="{% url 'product_list' %}">Back to Product List</a>
+</body>
+</html>
+
+
